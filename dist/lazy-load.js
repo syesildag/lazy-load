@@ -29,7 +29,7 @@ var LazyLoad;
         InstanceImpl.prototype.observeElement = function (element) {
             this._observeElement(element, this.observer);
         };
-        InstanceImpl.prototype.triggerLoad = function (element) {
+        InstanceImpl.prototype.load = function (element) {
             this._observeElement(element);
         };
         InstanceImpl.prototype._observeElement = function (element, observer) {

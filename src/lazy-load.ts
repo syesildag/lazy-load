@@ -17,7 +17,7 @@ namespace LazyLoad {
   export interface Instance {
     observe(): void;
     observeElement(element: Element): void;
-    triggerLoad(element: Element): void;
+    load(element: Element): void;
   }
 
   class InstanceImpl implements Instance {
@@ -49,7 +49,7 @@ namespace LazyLoad {
       this._observeElement(element, this.observer);
     }
 
-    public triggerLoad(element: Element) {
+    public load(element: Element) {
       this._observeElement(element);
     }
 

@@ -1,0 +1,23 @@
+{
+    "name": "lazy-load",
+    "version": "1.0.0",
+    "description": "lazy-load images, iframes, etc.",
+    "main": "lazy-load.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/syesildag/lazy-load.git"
+    },
+    "keywords": [
+        "lazy-load"
+    ],
+    "author": "Serkan YESILDAG",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/syesildag/lazy-load/issues"
+    },
+    "homepage": "https://github.com/syesildag/lazy-load#readme"
+}

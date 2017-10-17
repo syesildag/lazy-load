@@ -40,6 +40,10 @@ var LazyLoad;
                 return;
             }
             this.options.load(element);
+            if (LazyLoad.DEBUG) {
+                console.log('loading element...');
+                console.dir(element);
+            }
         };
         return InstanceImpl;
     }());

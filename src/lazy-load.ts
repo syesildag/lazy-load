@@ -64,6 +64,10 @@ namespace LazyLoad {
       }
 
       this.options.load(<HTMLImageElement>element);
+      if(DEBUG) {
+        console.log('loading element...');
+        console.dir(element);
+      }
     }
   }
 

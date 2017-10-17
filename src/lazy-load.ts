@@ -4,6 +4,9 @@
  */
 namespace LazyLoad {
   'use strict';
+  
+  export var DEBUG: boolean = false;
+  
   export interface Options extends IntersectionObserverInit {
     dataLoaded?: string;
     dataSource?: string;
@@ -32,9 +35,7 @@ namespace LazyLoad {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
           observer.unobserve(entry.target);
-
-          if (!this.options.isLoaded(entry.target))
-            this.options.load(<HTMLImageElement>entry.target);
+          this.load(entry.target);
         }
       });
     }

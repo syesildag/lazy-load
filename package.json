@@ -4,7 +4,9 @@
     "description": "lazy-load images, iframes, etc.",
     "main": "lazy-load.js",
     "scripts": {
-        "build": "tsc",
+        "uglify:dist": "uglifyjs dist/lazy-load.js > dist/lazy-load.min.js",
+        "uglify": "npm run uglify:dist",
+        "build": "tsc && npm run uglify",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -19,5 +21,8 @@
     "bugs": {
         "url": "https://github.com/syesildag/lazy-load/issues"
     },
-    "homepage": "https://github.com/syesildag/lazy-load#readme"
+    "homepage": "https://github.com/syesildag/lazy-load#readme",
+    "devDependencies":{
+        "uglify-js": "^3.1.4"
+    }
 }

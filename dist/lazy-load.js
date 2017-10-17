@@ -5,6 +5,7 @@
 var LazyLoad;
 (function (LazyLoad) {
     'use strict';
+    LazyLoad.DEBUG = false;
     var InstanceImpl = (function () {
         function InstanceImpl(options) {
             this.options = options;
@@ -16,8 +17,7 @@ var LazyLoad;
             entries.forEach(function (entry) {
                 if (entry.intersectionRatio > 0) {
                     observer.unobserve(entry.target);
-                    if (!_this.options.isLoaded(entry.target))
-                        _this.options.load(entry.target);
+                    _this.load(entry.target);
                 }
             });
         };

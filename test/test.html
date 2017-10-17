@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LazyLoad</title>
+  <script type="text/javascript" lang="javascript" src="../dist/lazy-load.js" charset="UTF-8"></script>
+  <script type="text/javascript" lang="javascript">
+    let lazyLoadInstance;
+    window.addEventListener("DOMContentLoaded", function() {
+      LazyLoad.DEBUG = true;
+      lazyLoadInstance = new LazyLoad.create();
+      lazyLoadInstance.observe();
+    });
+  </script>
+  <style type="text/css">
+    .container {
+      width: 360px;
+      height: 360px;
+      overflow: hidden;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image1"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image2"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image3"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image4"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image5"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image6"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image7"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image8"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image9"></div>
+  <div class="container"><img class="lazy-load" data-src="http://placehold.it/360x360&text=image10"></div>
+</body>
+</html>

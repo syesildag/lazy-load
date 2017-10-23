@@ -19,6 +19,15 @@
       overflow: hidden;
       padding: 10px;
     }
+    .lazy-load {
+      transition: all .5s ease;
+    }
+    .lazy-load:not([data-loaded]) {
+      opacity: 0;
+    }
+    .lazy-load[data-loaded] {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
